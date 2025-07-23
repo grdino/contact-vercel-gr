@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us</title>
+  <title>Contact Gerry</title>
   <style>
     body {
       font-family: sans-serif;
@@ -25,13 +25,14 @@
     input, textarea {
       width: 100%;
       margin-top: 0.75rem;
+      margin-bottom: 1rem;
       padding: 0.75rem;
       border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 1rem;
     }
     button {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
       padding: 0.75rem;
       background-color: #004aad;
       color: white;
@@ -50,18 +51,19 @@
   <div class="form-container">
     <h2>Contact Gerry</h2>
     <form action="https://api.web3forms.com/submit" method="POST">
-<!--      <input type="hidden" name="access_key" value="7476f030-418e-4e76-858f-bbb7e0c8e1f7" />   <!-- gr@gerryray.net -->
-      <input type="hidden" name="access_key" value="3056b283-dcc6-4999-999c-5fbb5780c3a1" />   <!-- gerry@ronmorgan.net -->
+      <!--      <input type="hidden" name="access_key" value="7476f030-418e-4e76-858f-bbb7e0c8e1f7" />   <!-- gr@gerryray.net -->
+      <!-- Using Web3Forms access key for gerry@ronmorgan.net -->
+      <input type="hidden" name="access_key" value="3056b283-dcc6-4999-999c-5fbb5780c3a1" />
       <input type="hidden" name="redirect" value="https://gerryray.net/thank-you" />
 
-      <label for="name">Name</label>
+      <label for="name">Name:</label>
       <input type="text" name="name" required />
 
-      <label for="email">Email</label>
-      <input type="email" name="email" value="" required />
+      <label for="email">Email:</label>
+      <input type="email" name="email" value="gerry@ronmorgan.net" required />
 
-      <label for="message">Message</label>
-      <textarea name="message" rows="5" required></textarea>
+      <label for="message">Message:</label>
+      <textarea name="message" rows="5" required>Hi Gerry, I’m interested in properties in Puerto Vallarta.</textarea>
 
       <button type="submit">Send Message</button>
     </form>

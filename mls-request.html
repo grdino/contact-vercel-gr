@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MLS Request</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .form-container {
+      background: white;
+      padding: 2rem 3rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+    .disclaimer {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      margin-top: 0.75rem;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    .checkbox-label {
+      font-size: 0.95rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    button {
+      padding: 0.75rem;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      width: 100%;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #00337a;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>MLS Request</h2>
+    <p class="disclaimer">
+      I understand that I will receive an email from Gerry Ray at Ron Morgan Properties with a link for me to register for my personal MLS Portal. Ron Morgan Properties will not sell or give your information to anyone and you will not receive spam from us.
+    </p>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <!-- Web3Forms credentials -->
+      <input type="hidden" name="access_key" value="3056b283-dcc6-4999-999c-5fbb5780c3a1" />
+      <input type="hidden" name="subject" value="Request for MLS Portal" />
+      <input type="hidden" name="redirect" value="https://contact.gerryray.net/mls-request-thank-you.html" />
+
+      <label for="name">Name:</label>
+      <input type="text" name="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea name="message" rows="5" required>
+Please send me a link to set up my own personal MLS portal for searching listings in Puerto Vallarta.
+      </textarea>
+
+      <label class="checkbox-label">
+        <input type="checkbox" name="consent" required />
+        I agree to the disclosure above
+      </label>
+
+      <button type="submit">Request My MLS Portal</button>
+    </form>
+  </div>
+</body>
+</html>
